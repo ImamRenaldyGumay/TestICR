@@ -58,8 +58,8 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item <?= ($this->uri->uri_string() == 'DataOrders') || ($this->uri->uri_string() == 'DataProdi') ? 'menu-open' : '' ?>">
-          <a href="#" class="nav-link <?= ($this->uri->uri_string() == 'DataFakultas') || ($this->uri->uri_string() == 'DataProdi') ? 'active' : '' ?> ">
+        <li class="nav-item <?= ($this->uri->uri_string() == 'DataOrders') || ($this->uri->uri_string() == 'DataEmployee') || ($this->uri->uri_string() == 'DataCustomer') || ($this->uri->uri_string() == 'DataProduct') ? 'menu-open' : '' ?>">
+          <a href="#" class="nav-link <?= ($this->uri->uri_string() == 'DataOrders') || ($this->uri->uri_string() == 'DataEmployee') || ($this->uri->uri_string() == 'DataCustomer') || ($this->uri->uri_string() == 'DataProduct') ? 'active' : '' ?> ">
             <i class="nav-icon fas fa-folder"></i>
             <p>
               Data Master
@@ -71,6 +71,24 @@
               <a href="<?= base_url('DataOrders') ?>" class="nav-link <?= ($this->uri->uri_string() == 'DataOrders') ? 'active' : '' ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Data Orders</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?= base_url('DataEmployee') ?>" class="nav-link <?= ($this->uri->uri_string() == 'DataEmployee') ? 'active' : '' ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Data Employee</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?= base_url('DataCustomer') ?>" class="nav-link <?= ($this->uri->uri_string() == 'DataCustomer') ? 'active' : '' ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Data Customer</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?= base_url('DataProduct') ?>" class="nav-link <?= ($this->uri->uri_string() == 'DataProduct') ? 'active' : '' ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Data Product</p>
               </a>
             </li>
           </ul>

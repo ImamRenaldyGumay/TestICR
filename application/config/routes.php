@@ -57,3 +57,13 @@ $route['Login'] = 'Auth/Login';
 $route['Logout'] = 'Auth/Logout';
 
 $route['DataOrders'] = 'Admin/DataOrders';
+$route['DataEmployee'] = 'Admin/DataEmployee';
+$route['DataCustomer'] = 'Admin/DataCustomer';
+$route['DataProduct'] = 'Admin/DataProduct';
+
+$route['tambahEmployee'] = 'Admin/tambahEmployee';
+$route['HapusEmployee'] = 'Admin/HapusEmployee';
+$route['EditDataEmployee'] = 'Admin/EditDataEmployee';
+
+$route['tambahCustomer'] = 'Admin/tambahCustomer';
+$route['HapusCustomer'] = 'Admin/HapusCustomer';
