@@ -6,6 +6,7 @@ class Auth extends CI_Controller
   public function __construct()
   {
     parent::__construct();
+    $this->load->model('Auth_Model', 'Auth');
   }
 
   public function Login()
@@ -33,27 +34,31 @@ class Auth extends CI_Controller
       'email' => $email,
       'password' => $password
     );
-
-    if ($this->Auth->cek_Login($data)->num_rows() > 0) {
-      $user = $this->Auth->cek_Login($data)->result();
-      foreach ($user as $userAkun) {
-        $userAkun = array(
-          'idAkun' => $userAkun->id_user,
+    if ($this->Auth->cek_login($data)->num_rows() > 0) {
+      $user = $this->Auth->cek_login($data)->result();
+      foreach ($user as $userakun) {
+        $userakun = array(
+          'idakun' => $userakun->id_user,
           'status' => 'SUKSES',
-          'nama' => $userAkun->nama_user,
-          'role' => $userAkun->role_user
+          'nama' => $userakun->nama,
+          'role' => $userakun->role
         );
-        $this->session->set_userdata($userAkun);
-        if ($userAkun['role'] == 1) {
-          $this->fungsiPeringatan('Berhasil Sign In');
+        $this->session->set_userdata($userakun);
+
+        if ($userakun['role'] == '1') {
+          $this->fungsiPeringatan("Berhasil Sign In");
           redirect('Admin', 'refresh');
-        } elseif ($userAkun['role'] == 2) {
-          $this->fungsiPeringatan('Berhasil Sign In');
+        } else if ($userakun['role'] == '2') {
+          $this->fungsiPeringatan("Berhasil Sign In");
           redirect('User', 'refresh');
+        } else {
+          // $this->fungsiPeringatan("Berhasil Sign In");
+          // redirect('Instruktur', 'refresh');
         }
       }
     } else {
-      $this->fungsiPeringatan('Pastikan Email dan Password benar');
+      // redirect('Auth/ErrorLogin');
+      $this->fungsiPeringatan("Pastikan Email dan Password benar");
       redirect('Login', 'refresh');
     }
   }

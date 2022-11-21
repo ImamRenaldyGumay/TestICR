@@ -26,9 +26,10 @@
       <div class="card-body login-card-body">
         <p class="login-box-msg">Sign in to start your session</p>
 
-        <form action="#" method="post">
+        <form action="<?= base_url('Login') ?>" method="post">
           <div class="input-group mb-3">
-            <input type="email" class="form-control" placeholder="Email">
+            <input type="text" class="form-control" placeholder="Email" id="email" name="email">
+            <?= form_error('email', '<small class="text-danger pl-3">', '</small>') ?>
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-envelope"></span>
@@ -36,7 +37,8 @@
             </div>
           </div>
           <div class="input-group mb-3">
-            <input type="password" class="form-control" placeholder="Password">
+            <input type="password" class="form-control" placeholder="Passwor" id="password" name="password">
+            <?= form_error('password', '<small class="text-danger pl-3">', '</small>') ?>
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-lock"></span>
@@ -54,8 +56,8 @@
             </div> -->
             <!-- /.col -->
             <div class="col-4">
-              <!-- <button type="submit" class="btn btn-primary btn-block">Sign In</button> -->
-              <a href="<?= base_url('Admin') ?>">Login</a>
+              <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+              <!-- <a href="<?= base_url('Admin') ?>">Login</a> -->
             </div>
             <!-- /.col -->
           </div>

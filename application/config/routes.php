@@ -54,3 +54,6 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['Login'] = 'Auth/Login';
+$route['Logout'] = 'Auth/Logout';
+
+$route['DataOrders'] = 'Admin/DataOrders';
