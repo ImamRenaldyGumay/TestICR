@@ -15,10 +15,8 @@
         </div><!-- /.col -->
       </div><!-- /.row -->
     </div><!-- /.container-fluid -->
-    <!-- <a href="<?= base_url('TambahDataFakultas') ?>" class="btn btn-primary col-12 mt-3" data-toggle="modal" data-target="#exampleModal">Tambah <?= $title ?></a> -->
-    <button type="button" class="btn btn-primary col-12 mt-3" data-toggle="modal" data-target="#TDF">
-      tambah
-    </button>
+    <a href="<?= base_url('addOrders') ?>" class="btn btn-primary col-12 mt-3">Tambah <?= $title ?></a>
+    <!-- <button type="button" class="btn btn-primary col-12 mt-3" data-toggle="modal" data-target="#TDF">tambah</button> -->
   </div>
   <!-- /.content-header -->
 

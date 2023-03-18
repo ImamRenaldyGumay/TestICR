@@ -57,6 +57,9 @@ $route['Login'] = 'Auth/Login';
 $route['Logout'] = 'Auth/Logout';
 
 $route['DataOrders'] = 'Admin/DataOrders';
+$route['addOrders'] = 'Action/v_tambah_order';
+
+
 $route['DataEmployee'] = 'Admin/DataEmployee';
 $route['DataCustomer'] = 'Admin/DataCustomer';
 $route['DataProduct'] = 'Admin/DataProduct';
